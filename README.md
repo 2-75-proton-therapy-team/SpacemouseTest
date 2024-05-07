@@ -7,16 +7,18 @@
     python -V
     ```
 2. Download this current repository.
+
    a. Select the green Code button shown here.
     <img width="931" alt="Screenshot 2024-05-06 at 11 15 20 PM" src="https://github.com/2-75-proton-therapy-team/SpacemouseTest/assets/23321889/490bde7d-23f4-42ea-a19a-31b3f3b1c12e">
+    
    b. Choose to download the Zip.  
 
-4. Open a Powershell terminal on your Windows computer and move into the directory you installed this github repository.
+3. Open a Powershell terminal on your Windows computer and move into the directory you installed this github repository.
 
    ```
     cd [PATH_TO_LOCAL_DIRECTORY]\SpacemouseTest
     ```
-5. Run the setup script. This will create a Python virtual environment named `manual_alignment_venv` with all the necessary python modules already installed inside.  
+4. Run the setup script. This will create a Python virtual environment named `manual_alignment_venv` with all the necessary python modules already installed inside.  
     ```
     ./setup.ps1
     ```
