@@ -9,7 +9,7 @@
 2. Open a Powershell terminal on your Windows computer and move into the directory you installed this github repository.
 
    ```
-    cd [PATH_TO_LOCAL_DIRECTORY]\Spacemouse_Test
+    cd [PATH_TO_LOCAL_DIRECTORY]\SpacemouseTest
     ```
 3. Run the setup script. This will create a Python virtual environment named `manual_alignment_venv` with all the necessary python modules already installed inside.  
     ```
