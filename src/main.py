@@ -43,8 +43,8 @@ if __name__ == "__main__":
     # Listen for the 'esc' key
     keyboard.on_press_key("esc", keyboard_stop) 
 
-    while not isStopped:
-        if spacenavigator.open():
+    if spacenavigator.open():
+        while not isStopped:
             state = spacenavigator.read()
             print(f"x:{state.x}, y:{state.y}, z:{state.z}, roll: {state.roll}, pitch: {state.pitch}, yaw: {state.yaw}")
 
@@ -61,14 +61,13 @@ if __name__ == "__main__":
             
             if state.yaw:
                 moving_slice = SliceTransformations.rotate(moving_slice, state.yaw)
-        else: 
-            print("No device detected")
 
-        cv2.imshow("Overlayed Slices", imshowpair_diff(fixed_slice, moving_slice))
-        cv2.waitKey(10)
-
-    cv2.waitKey(1)
-    cv2.destroyAllWindows()
+            cv2.imshow("Overlayed Slices", imshowpair_diff(fixed_slice, moving_slice))
+            cv2.waitKey(10)
+        cv2.waitKey(1)
+        cv2.destroyAllWindows()
+    else: 
+        print("No device detected")
 
 
 
